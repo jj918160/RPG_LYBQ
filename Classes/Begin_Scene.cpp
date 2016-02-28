@@ -1,4 +1,4 @@
-//
+﻿
 //  Begin_Scene.cpp
 //  RPG_LYBQ
 //
@@ -10,8 +10,9 @@
 #include "Animation_itools.h"
 #include "Loading_Layer.h"
 #include "SimpleAudioEngine.h"
-
+#include <Windows.h>
 using namespace CocosDenshion;
+USING_NS_CC;
 Scene* Begin_Scene::createScene()
 {
     // 'scene' is an autorelease object
@@ -36,8 +37,7 @@ bool Begin_Scene::init()
     {
         return false;
     }
-    
-  
+	
     load_animation();
     FileUtils::getInstance()->addSearchPath("res/begin");
     title_num=0;
@@ -46,33 +46,33 @@ bool Begin_Scene::init()
     bg->setPosition(size/2);
     addChild(bg);
    
-    Label*title1=Label::createWithBMFont("title.fnt", "琅琊榜前传");
-  
-    title1->setPosition(Vec2(size.width*4/5,size.height*7/8));
-    addChild(title1);
-    for (int i=0; i<5; i++) {
-        auto sp=title1->getLetter(i);
-        sp->setPosition(200,-size.height*i/8);
-        if (i>=3){
-            sp->setScale(0.8);
-            sp->setColor(Color3B(200,0,0));
-        }
-    }
-    Label*title2=Label::createWithBMFont("arial-14.fnt", "一卷风云琅琊榜，");
-    title2->setPosition(size.width/5+100,size.height*9/10);
-    title2->setScale(0.6);
-    addChild(title2,0,1);
-    
-     Label*title3=Label::createWithBMFont("arial-14.fnt", "囊尽天下奇英才。");
-       title3->setPosition(size.width*3/10+100,size.height*4/5);
-    title3->setScale(0.6);
-    addChild(title3,0,2);
-    
-  
-    for (int i=0; i<8; i++) {
-        title2->getLetter(i)->setOpacity(0);
-        title3->getLetter(i)->setOpacity(0);
-    }
+	Label*title1 = Label::createWithBMFont("title.fnt", "琅琊榜前传");
+
+	title1->setPosition(Vec2(size.width * 4 / 5, size.height * 7 / 8));
+	addChild(title1);
+	for (int i = 0; i < 5; i++) {
+		auto sp = title1->getLetter(i);
+		sp->setPosition(200, -size.height*i / 8);
+		if (i >= 3){
+			sp->setScale(0.8);
+			sp->setColor(Color3B(200, 0, 0));
+		}
+	}
+	Label*title2 = Label::createWithBMFont("arial-14.fnt", "一卷风云琅琊榜，");
+	title2->setPosition(size.width / 5 + 100, size.height * 9 / 10);
+	title2->setScale(0.6);
+	addChild(title2, 0, 1);
+
+	Label*title3 = Label::createWithBMFont("arial-14.fnt", "囊尽天下奇英才。");
+	title3->setPosition(size.width * 3 / 10 + 100, size.height * 4 / 5);
+	title3->setScale(0.6);
+	addChild(title3, 0, 2);
+
+
+	for (int i = 0; i < 8; i++) {
+		title2->getLetter(i)->setOpacity(0);
+		title3->getLetter(i)->setOpacity(0);
+	}
     
     
     for (int i=0; i<2; i++) {
@@ -198,16 +198,16 @@ void Begin_Scene::creat_botton(int t){
 
 void Begin_Scene::create_bird(float t,std::string name){
     auto bird1=Sprite::create();
-    bird1->setPosition(Vec2(arc4random()%960,arc4random()%640));
+    bird1->setPosition(Vec2(CCRANDOM_0_1()*960,CCRANDOM_0_1()*640));
     AnimationCache* ac=AnimationCache::getInstance();
     Animation *a=ac->getAnimation(name);
     Animate* animate=Animate::create(a);
     bird1->runAction(animate);
-    bird1->runAction(RepeatForever::create(Sequence::create(MoveTo::create(t,Vec2(arc4random()%960,arc4random()%640)),
+    bird1->runAction(RepeatForever::create(Sequence::create(MoveTo::create(t,Vec2(CCRANDOM_0_1()*960,CCRANDOM_0_1()*640)),
                                                             FlipX::create(true),
-                                                            MoveTo::create(t,Vec2(arc4random()%960,arc4random()%640)),FlipX::create(false),
-                                                            MoveTo::create(t,Vec2(arc4random()%960,arc4random()%640)),FlipX::create(true),
-                                                            MoveTo::create(t,Vec2(arc4random()%960,arc4random()%640)),FlipX::create(false),
+                                                            MoveTo::create(t,Vec2(CCRANDOM_0_1()*960,CCRANDOM_0_1()*640)),FlipX::create(false),
+                                                            MoveTo::create(t,Vec2(CCRANDOM_0_1()*960,CCRANDOM_0_1()*640)),FlipX::create(true),
+                                                            MoveTo::create(t,Vec2(CCRANDOM_0_1()*960,CCRANDOM_0_1()*640)),FlipX::create(false),
                                                             NULL)));
     
     this->addChild(bird1);
@@ -219,12 +219,12 @@ void Begin_Scene::create_bird(float t,std::string name){
 
 void Begin_Scene::create_flower(float dt){
     auto flower=Sprite::create();
-    flower->setPosition(Vec2(arc4random()%100+800,300+arc4random()%700));
+    flower->setPosition(Vec2(CCRANDOM_0_1()*100+800,300+CCRANDOM_0_1()*700));
     AnimationCache* ac=AnimationCache::getInstance();
     Animation *a=ac->getAnimation("flyflower");
     Animate* animate=Animate::create(a);
     flower->runAction(animate);
-    flower->runAction(Sequence::create(MoveTo::create(20,Vec2(arc4random()%760+400,-10)),RemoveSelf::create(),
+    flower->runAction(Sequence::create(MoveTo::create(20,Vec2(CCRANDOM_0_1()*760+400,-10)),RemoveSelf::create(),
                                                              
                                                              NULL));
     this->addChild(flower);
