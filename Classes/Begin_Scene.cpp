@@ -10,7 +10,6 @@
 #include "Animation_itools.h"
 #include "Loading_Layer.h"
 #include "SimpleAudioEngine.h"
-#include <Windows.h>
 using namespace CocosDenshion;
 USING_NS_CC;
 Scene* Begin_Scene::createScene()

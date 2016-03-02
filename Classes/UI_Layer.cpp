@@ -17,6 +17,7 @@ UI_Layer*UI_Layer::getInstance(){
     if (myui==nullptr) {
         myui=UI_Layer::create();
     }
+
     return myui;
 }
 bool UI_Layer::init()

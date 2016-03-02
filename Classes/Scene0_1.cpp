@@ -12,6 +12,7 @@
 #include "Talking_Rush.h"
 Scene* Scene0_1::createScene()
 {
+
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
     scene->getPhysicsWorld()->setGravity(Vec2::ZERO);
