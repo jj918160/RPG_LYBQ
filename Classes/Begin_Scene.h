@@ -1,4 +1,4 @@
-//
+#pragma  execution_character_set("utf-8")
 //  Begin_Scene.h
 //  RPG_LYBQ
 //
