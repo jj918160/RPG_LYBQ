@@ -12,6 +12,8 @@
 #include "SimpleAudioEngine.h"
 using namespace CocosDenshion;
 USING_NS_CC;
+//test
+//rest
 Scene* Begin_Scene::createScene()
 {
     // 'scene' is an autorelease object
