@@ -5,7 +5,7 @@
 //  Created by mac on 15-11-15.
 //
 //
-
+#include "Player_Base.h"
 #include "Scene0_1.h"
 #include "UI_Layer.h"
 #include "Animation_itools.h"
