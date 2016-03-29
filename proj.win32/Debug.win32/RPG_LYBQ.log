@@ -1,0 +1,32 @@
+﻿生成启动时间为 2016/2/28 22:57:28。
+     1>项目“G:\projects\RPG_LYBQ\proj.win32\RPG_LYBQ.vcxproj”在节点 2 上(Build 个目标)。
+     1>PreLinkEvent:
+         if not exist "G:\projects\RPG_LYBQ\proj.win32\Debug.win32\" mkdir "G:\projects\RPG_LYBQ\proj.win32\Debug.win32\"
+         xcopy /Y /Q "C:\Cocos\frameworks\cocos2d-x-3.8.1\prebuilt\win32\*.*" "G:\projects\RPG_LYBQ\proj.win32\Debug.win32\"
+         
+         :VCEnd
+         复制了 60 个文件
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\projects\RPG_LYBQ\proj.win32\Debug.win32\RPG_LYBQ.exe" /INCREMENTAL /NOLOGO /LIBPATH:G:\projects\RPG_LYBQ\proj.win32\Debug.win32\ /LIBPATH:G:\projects\RPG_LYBQ\proj.win32\Debug.win32\ opengl32.lib glew32.lib libzlib.lib libwebp.lib libiconv.lib freetype.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\projects\RPG_LYBQ\proj.win32\Debug.win32\RPG_LYBQ.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\projects\RPG_LYBQ\proj.win32\Debug.win32\RPG_LYBQ.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
+         Debug.win32\Animation_itools.obj
+         Debug.win32\AppDelegate.obj
+         Debug.win32\Begin_Scene.obj
+         Debug.win32\HelloWorldScene.obj
+         Debug.win32\Loading_Layer.obj
+         Debug.win32\Player_Base.obj
+         Debug.win32\Scene0_1.obj
+         Debug.win32\Talking_Rush.obj
+         Debug.win32\UI_Layer.obj
+         Debug.win32\main.obj
+     1>Animation_itools.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+            正在创建库 G:\projects\RPG_LYBQ\proj.win32\Debug.win32\RPG_LYBQ.lib 和对象 G:\projects\RPG_LYBQ\proj.win32\Debug.win32\RPG_LYBQ.exp
+     1>Scene0_1.obj : error LNK2019: 无法解析的外部符号 "public: static class Player_Base * __cdecl Player_Base::create(char const *,char const *)" (?create@Player_Base@@SAPAV1@PBD0@Z)，该符号在函数 "public: virtual bool __thiscall Scene0_1::init(void)" (?init@Scene0_1@@UAE_NXZ) 中被引用
+     1>Scene0_1.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall Player_Base::walk(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?walk@Player_Base@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)，该符号在函数 "public: virtual bool __thiscall Scene0_1::init(void)" (?init@Scene0_1@@UAE_NXZ) 中被引用
+     1>Scene0_1.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall Player_Base::set_Image(char const *,int,int)" (?set_Image@Player_Base@@QAEXPBDHH@Z)，该符号在函数 "public: void __thiscall <lambda_ef5afe0c7598872b1dc39f7e89dca99c>::operator()(class cocos2d::Node *)const " (??R<lambda_ef5afe0c7598872b1dc39f7e89dca99c>@@QBEXPAVNode@cocos2d@@@Z) 中被引用
+     1>Scene0_1.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall Player_Base::set_chineseName(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?set_chineseName@Player_Base@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)，该符号在函数 "public: virtual bool __thiscall Scene0_1::init(void)" (?init@Scene0_1@@UAE_NXZ) 中被引用
+     1>G:\projects\RPG_LYBQ\proj.win32\Debug.win32\RPG_LYBQ.exe : fatal error LNK1120: 4 个无法解析的外部命令
+     1>已完成生成项目“G:\projects\RPG_LYBQ\proj.win32\RPG_LYBQ.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.52
