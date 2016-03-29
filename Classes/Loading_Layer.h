@@ -26,7 +26,7 @@ public:
     CREATE_FUNC(Loading_Layer);
     virtual void update(float dt);
 private:
-    char* loadmsg(const char* filepath);
+    std::string loadmsg(const char* filepath);
     Animation_itools*itools;
     void step_2(float dt);
     bool talk_over;

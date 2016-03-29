@@ -1,22 +1,22 @@
 <Solution>
-  <PropertyGroup Name="RPG_LYBQ" Version="2.3.2.3" Type="CocosStudio" />
+  <PropertyGroup Name="RPG_LYBQ" Version="3.10.0.0" Type="CocosStudio" />
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Project Name="MainScene.csd" Type="Scene" />
-        <Image Name="HelloWorld.png" />
-        <Project Name="Layer.csd" Type="Layer" />
-        <Image Name="CG-1086.png" />
-        <Image Name="CG-7005.png" />
-        <Image Name="zhangjiekuang.png" />
         <Image Name="button_atk.png" />
         <Image Name="button_atk2.png" />
-        <Image Name="sneakyJoytick.png" />
-        <Image Name="sneakyJoytickBG.png" />
-        <Image Name="CG-1582.png" />
-        <Image Name="CG-1640.png" />
+        <Image Name="CG-1086.png" />
         <Image Name="CG-1146.png" />
         <Image Name="CG-1147.png" />
+        <Image Name="CG-1582.png" />
+        <Image Name="CG-1640.png" />
+        <Image Name="CG-7005.png" />
+        <Image Name="HelloWorld.png" />
+        <Project Name="Layer.csd" Type="Layer" />
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="sneakyJoytick.png" />
+        <Image Name="sneakyJoytickBG.png" />
+        <Image Name="zhangjiekuang.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

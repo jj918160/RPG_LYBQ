@@ -41,8 +41,11 @@ bool Loading_Layer::init()
     bg->setPosition(480,320);
     addChild(bg);
     
-    char*msg=loadmsg("headpic/dubai.txt");
-    auto label=Label::createWithSystemFont(msg,"Arial", 28,Size::ZERO, TextHAlignment::CENTER,
+    std::string pbaty=loadmsg("headpic/dubai.txt");
+    
+    
+    
+    auto label=Label::createWithSystemFont(pbaty,"Arial", 28,Size::ZERO, TextHAlignment::CENTER,
                                             TextVAlignment::TOP);
     label->setPosition(Vec2(480,-300));
     addChild(label);
@@ -70,18 +73,21 @@ bool Loading_Layer::init()
     
     return true;
 }
-char* Loading_Layer::loadmsg(const char* filepath){
+std::string Loading_Layer::loadmsg(const char* filepath){
     std::string fullpath=FileUtils::getInstance()->fullPathForFilename(filepath);
+    unsigned long bufferSize=0;
+    unsigned char* p=NULL;
     
-    FILE*fp=fopen(fullpath.c_str(), "r");
-    fseek(fp,0,SEEK_END);
-    int len=ftell(fp);
-    char*p=new char[len+1];
-    memset(p, 0, len+1);
-    fseek(fp, 0, SEEK_SET);
-    fread(p,1, len, fp);
-    fclose(fp);//关闭文件
-    return p;
+    //std::string fullpath=FileUtils::getInstance()->fullPathForFilename(txtfilename);
+    auto data=FileUtils::getInstance()->getDataFromFile(fullpath.c_str());
+    p=data.getBytes();
+    std::string temp;
+    int i=0;
+    while (p[i]!='@') {
+            temp+=p[i];
+        i++;
+    }
+    return temp;
 }
 void Loading_Layer::step_2(float dt){
     if (main_step==0) {

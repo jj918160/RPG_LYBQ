@@ -28,6 +28,7 @@ public:
    void title_fadeout(float dt);
     virtual void onExit();
     void load_animation();
+  // unsigned char* loadmsg(const char* filepath);
 private:
       Vector<MenuItem*>vecfoeitem;
     int title_num;

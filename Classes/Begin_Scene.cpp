@@ -10,10 +10,23 @@
 #include "Animation_itools.h"
 #include "Loading_Layer.h"
 #include "SimpleAudioEngine.h"
+
 using namespace CocosDenshion;
 USING_NS_CC;
-//test
-//rest
+
+
+//unsigned char* Begin_Scene::loadmsg(const char* filepath){
+//    //std::string docPath=FileUtils::getWritablePath();
+//    unsigned long bufferSize=0;
+//    unsigned char* pBuffer=NULL;
+//    
+//    std::string fullpath=FileUtils::getInstance()->fullPathForFilename(filepath);
+//    auto data=FileUtils::getInstance()->getDataFromFile(filepath);
+//    pBuffer=data.getBytes();
+//
+//    return pBuffer;
+//}
+
 Scene* Begin_Scene::createScene()
 {
     // 'scene' is an autorelease object
@@ -40,6 +53,7 @@ bool Begin_Scene::init()
     }
 	
     load_animation();
+    //char*msg=loadmsg("headpic/dubai.txt");
     FileUtils::getInstance()->addSearchPath("res/begin");
     title_num=0;
     auto size=Director::getInstance()->getVisibleSize();
@@ -59,6 +73,7 @@ bool Begin_Scene::init()
 			sp->setColor(Color3B(200, 0, 0));
 		}
 	}
+    
 	Label*title2 = Label::createWithBMFont("arial-14.fnt", "一卷风云琅琊榜，");
 	title2->setPosition(size.width / 5 + 100, size.height * 9 / 10);
 	title2->setScale(0.6);

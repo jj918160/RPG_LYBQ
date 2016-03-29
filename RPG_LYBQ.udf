@@ -1,10 +1,10 @@
-<UserData Version="2.3.2.3">
+<UserData Version="3.10.0.0">
   <Properties>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="VS" />
-        <IsLastPublish Value="True" />
-        <LastRunType Value="Windows" />
+        <IsLastPublish Value="False" />
+        <LastRunType Value="Android" />
       </Value>
     </Item>
     <Item Key="PackageParamsKey">
@@ -14,13 +14,16 @@
         <LuaEncryptSign Value="" />
         <Android_PackageName Value="org.cocos.RPGLYBQ" />
         <AndroidkeyStore Value="" />
-        <AndroidVersion Value="" />
+        <AndroidVersion Value="android-22" />
         <iOS_Target Value="RPG_LYBQ-mobile" />
         <iOS_BundleID Value="iOS Developer" />
-        <Platform Value="None" />
-        <RunPlatform Value="Windows" />
+        <Platform Value="Android" />
+        <RunPlatform Value="Android" />
         <FrameworkVersion Value="cocos2d-x-3.8.1" />
         <IsDebugKeystore Value="True" />
+        <KeystorePassword Value="" />
+        <KeystoreAliasName Value="" />
+        <KeystoreAliasPassword Value="" />
         <EnableSourceMap Value="False" />
         <EnableHTML5Advanced Value="False" />
       </Value>
@@ -31,7 +34,7 @@
           <FilePathData Path="MainScene.csd" />
           <FilePathData Path="Layer.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Layer.csd" />
+        <ActiveDocument Path="MainScene.csd" />
       </Value>
     </Item>
   </Properties>
