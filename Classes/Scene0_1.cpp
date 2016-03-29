@@ -5,13 +5,14 @@
 //  Created by mac on 15-11-15.
 //
 //
-
+#include "Player_Base.h"
 #include "Scene0_1.h"
 #include "UI_Layer.h"
 #include "Animation_itools.h"
 #include "Talking_Rush.h"
 Scene* Scene0_1::createScene()
 {
+
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
     scene->getPhysicsWorld()->setGravity(Vec2::ZERO);
@@ -50,7 +51,7 @@ bool Scene0_1::init()
     auto sp=Player_Base::create("linsu.png", "linsu");
    
     sp->setPosition(1050,150);
-    sp->set_chineseName("林殊");
+    sp->set_chineseName("linshu");
     addChild(sp,1,2);
     sp->walk("linsuleft_up");
     sp->runAction(Sequence::create(MoveBy::create(3,Vec2(-350,50)),CallFuncN::create([=](Node*pSender){
@@ -58,8 +59,8 @@ bool Scene0_1::init()
        
     }),NULL));
     
-    auto sp2=Player_Base::create("weizhen.png", "weizhen");
-    sp2->set_chineseName("卫铮");
+    auto sp2=Player_Base::create("weizhen2.png", "weizhen");
+    sp2->set_chineseName("weizhen");
     sp2->setPosition(1050,50);
     addChild(sp2,1,22);
     sp2->walk("weizhenleft_up");
@@ -68,16 +69,15 @@ bool Scene0_1::init()
        
     }),NULL));
     
-    auto sp3=Player_Base::create("linxie.png", "linxie");
-    
+    auto sp3=Player_Base::create("linxie2.png", "linxie");
     sp3->setPosition(900,100);
     addChild(sp3,1,33);
     sp3->walk("linxieleft_up");
     sp3->runAction(Sequence::create(MoveBy::create(3,Vec2(-350,50)),CallFuncN::create([=](Node*pSender){
         pSender->stopAllActions();
-        sp3->set_Image("linxie.png",2,0);
+        sp3->set_Image("linxie2.png",2,0);
     }),NULL));
-    sp3->set_chineseName("林燮");
+    sp3->set_chineseName("linxie");
    
     vec.pushBack(sp);
     vec.pushBack(sp2);
@@ -237,7 +237,7 @@ void Scene0_1::step_4(float dt){
        auto kk=(Player_Base*)UI_Layer::getInstance()->get_control();
         kk->stopAllActions();
         kk->set_active(false);
-        sp3->set_Image("linxie.png",2,0);
+        sp3->set_Image("linxie2.png",2,0);
         _eventDispatcher->pauseEventListenersForTarget(UI_Layer::getInstance());
         UI_Layer::getInstance()->setVisible(false);
     }

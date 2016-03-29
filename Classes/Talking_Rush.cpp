@@ -80,30 +80,48 @@ bool Talking_Rush::init(std::vector<std::string>talk)
         
         
         std::string first=talk.at(re_page);
-        CCLOG("%s",first.c_str());
-        Label*la=Label::create(first, "Arial", 20);
-        la->setColor(Color3B(255, 0, 0));
-        la->setPosition(420,120);
-        sp->addChild(la,1);
-        sp->setOpacity(0);
-        sp->runAction(FadeIn::create(0.1));
+        //CCLOG("%s",first.c_str());
+//        Label*la=Label::create(first, "Arial", 20);
+//        la->setColor(Color3B(255, 0, 0));
+//        la->setPosition(420,120);
+//        sp->addChild(la,1);
+//        sp->setOpacity(0);
+//        sp->runAction(FadeIn::create(0.1));
         
         std::string name;
-       
+        std::string say;
         auto it=first.begin();
-        for (; *it!=':'; it++) {
+        for (; *it!='*'; it++) {
             if (*it!='\n') {
                  name+=*it;
             }
         }
+        it++;
+        for(;it!=first.end();it++){
+                say+=*it;
+        }
+                Label*la=Label::create(say, "Arial", 20);
+                la->setColor(Color3B(255, 0, 0));
+                la->setPosition(420,120);
+                sp->addChild(la,1);
+                sp->setOpacity(0);
+                sp->runAction(FadeIn::create(0.1));
+        
+        
+        
          _name=name;
         std::string player_filename;
         player_filename=name+".png";
         CCLOG("name:%s",name.c_str());
+        CCLOG("say:%s",say.c_str());
         
         Sprite*my=Sprite::create(player_filename.c_str());
         my->setPosition(760,100);
         this->addChild(my);
+        
+        
+        
+        
         
                 re_page++;
     };

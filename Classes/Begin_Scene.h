@@ -1,4 +1,4 @@
-//
+#pragma  execution_character_set("utf-8")
 //  Begin_Scene.h
 //  RPG_LYBQ
 //
@@ -28,6 +28,7 @@ public:
    void title_fadeout(float dt);
     virtual void onExit();
     void load_animation();
+  // unsigned char* loadmsg(const char* filepath);
 private:
       Vector<MenuItem*>vecfoeitem;
     int title_num;

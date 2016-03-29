@@ -1,16 +1,10 @@
-//
-//  Player_Base.cpp
-//  RPG_LYBQ
-//
-//  Created by mac on 15-11-15.
-//
-//
-
+﻿
 #include "Player_Base.h"
 #include "UI_Layer.h"
 #include "Animation_itools.h"
 #include "Talking_Rush.h"
 #define PI 3.1415926
+
 Player_Base*Player_Base::create(const char*pic,const char*name){
     Player_Base *pRet = new(std::nothrow) Player_Base();
     if (pRet && pRet->init(pic,name))
@@ -24,7 +18,6 @@ Player_Base*Player_Base::create(const char*pic,const char*name){
         pRet = NULL;
         return NULL;
     }
-
     
 }
 void Player_Base::set_chineseName(std::string name){
@@ -36,7 +29,7 @@ bool Player_Base::init(const char*pic,const char*name){
     }
     _chineseName="梅长苏";
     _name=name;
-     loadanimation(pic);
+    loadanimation(pic);
     Texture2D*p=TextureCache::getInstance()->getTextureForKey(pic);
     this->initWithFile(pic,Rect(0,0,p->getContentSize().width/4,p->getContentSize().height/4));
     deriction=0;
@@ -50,23 +43,14 @@ bool Player_Base::init(const char*pic,const char*name){
 }
 void Player_Base::set_Image(const char*pic,int hang,int lie){
     Texture2D*p=TextureCache::getInstance()->getTextureForKey(pic);
-   
+    
     
     this->initWithFile(pic,Rect(p->getContentSize().width*lie/4,p->getContentSize().height*hang/4,p->getContentSize().width/4,p->getContentSize().height/4));
-   
+    
 }
 void Player_Base::update(float dt){
     Talking_Rush*tk=(Talking_Rush*)this->getParent()->getChildByTag(1);
-//    if (tk) {
-//        CCLOG("tk");
-//        if (!this->getChildByTag(6)) {
-//            CCLOG("%s:%s",tk->_name.c_str(),this->_chineseName.c_str());
-//            CCLOG("child");
-//        }
-//    }
-    
     if (tk&&!this->getChildByTag(6)&&tk->_name==this->_chineseName) {
-     
         auto sp=Sprite::create();
         Animation*animation=AnimationCache::getInstance()->getAnimation("talk");
         Animate*a=Animate::create(animation);
@@ -80,7 +64,7 @@ void Player_Base::update(float dt){
     if (!tk&&this->getChildByTag(6)) {
         this->removeChildByTag(6);
     }
-   
+    
     
     this->setZOrder(640-this->getPositionY());
     if (_active) {
@@ -92,33 +76,33 @@ void Player_Base::update(float dt){
             stopAllActions();
             return;
         }
-        if (an<PI/2&&an>=0&&deriction!=1)//右上
+        if (an<PI/2&&an>=0&&deriction!=1)
         {
             deriction=1;
             stopAllActions();
             walk(_name+"right_up");
             
         }
-        else if (an<PI&&an>=PI/2&&deriction!=2)//左上
+        else if (an<PI&&an>=PI/2&&deriction!=2)
         {
             deriction=2;
             stopAllActions();
             walk(_name+"left_up");
         }
-        else if (an<-PI/2&&an>=-PI&&deriction!=3)//左下
+        else if (an<-PI/2&&an>=-PI&&deriction!=3)
         {
             deriction=3;
             stopAllActions();
             walk(_name+"left_down");
         }
-        else if (an<0&&an>=-PI/2&&deriction!=4)//右下
+        else if (an<0&&an>=-PI/2&&deriction!=4)
         {
             deriction=4;
             stopAllActions();
             walk(_name+"right_down");
         }
     }
-
+    
 }
 
 void Player_Base::walk(std::string direction){
@@ -140,5 +124,5 @@ void Player_Base::loadanimation(const char*pic){
     ac->addAnimation(goxright,_name+"right_down");
     Animation*goxup=itools->makeAnimationfrommixpicture(pic,4,4,1,4,4,4,0.1f,true,-1);
     ac->addAnimation(goxup,_name+"right_up");
-
+    
 }
