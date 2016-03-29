@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0400A4661BF6BD0400741638 /* Begin_Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0400A4641BF6BD0400741638 /* Begin_Scene.cpp */; };
+		049B6FC91CAA60CB00624B65 /* SLGMapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */; };
+		049B6FCC1CAA6CAA00624B65 /* FightScene0_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */; };
+		049B6FCF1CAAAB0B00624B65 /* SLGCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */; };
 		049CBFF71BF811900094C3D7 /* Scene0_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049CBFF51BF811900094C3D7 /* Scene0_1.cpp */; };
 		049CBFFA1BF816910094C3D7 /* UI_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049CBFF81BF816910094C3D7 /* UI_Layer.cpp */; };
 		049CBFFF1BF824B90094C3D7 /* Player_Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049CBFFD1BF824B90094C3D7 /* Player_Base.cpp */; };
@@ -73,6 +76,12 @@
 /* Begin PBXFileReference section */
 		0400A4641BF6BD0400741638 /* Begin_Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Begin_Scene.cpp; sourceTree = "<group>"; };
 		0400A4651BF6BD0400741638 /* Begin_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Begin_Scene.h; sourceTree = "<group>"; };
+		049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGMapView.cpp; sourceTree = "<group>"; };
+		049B6FC81CAA60CB00624B65 /* SLGMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGMapView.h; sourceTree = "<group>"; };
+		049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FightScene0_1.cpp; sourceTree = "<group>"; };
+		049B6FCB1CAA6CAA00624B65 /* FightScene0_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightScene0_1.h; sourceTree = "<group>"; };
+		049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGCharacter.cpp; sourceTree = "<group>"; };
+		049B6FCE1CAAAB0B00624B65 /* SLGCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGCharacter.h; sourceTree = "<group>"; };
 		049CBFF51BF811900094C3D7 /* Scene0_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene0_1.cpp; sourceTree = "<group>"; };
 		049CBFF61BF811900094C3D7 /* Scene0_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene0_1.h; sourceTree = "<group>"; };
 		049CBFF81BF816910094C3D7 /* UI_Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UI_Layer.cpp; sourceTree = "<group>"; };
@@ -187,6 +196,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049B6FC61CAA5CDD00624B65 /* SGLFight */ = {
+			isa = PBXGroup;
+			children = (
+				049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */,
+				049B6FC81CAA60CB00624B65 /* SLGMapView.h */,
+				049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */,
+				049B6FCB1CAA6CAA00624B65 /* FightScene0_1.h */,
+				049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */,
+				049B6FCE1CAAAB0B00624B65 /* SLGCharacter.h */,
+			);
+			name = SGLFight;
+			sourceTree = "<group>";
+		};
 		049CBFFC1BF824910094C3D7 /* public and base */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +326,7 @@
 				04A194331BF741D900CFF47E /* Loading_Layer.h */,
 				049CBFF51BF811900094C3D7 /* Scene0_1.cpp */,
 				049CBFF61BF811900094C3D7 /* Scene0_1.h */,
+				049B6FC61CAA5CDD00624B65 /* SGLFight */,
 				049CBFFC1BF824910094C3D7 /* public and base */,
 				04A1942B1BF7328900CFF47E /* itools */,
 			);
@@ -482,10 +505,13 @@
 				049CBFF71BF811900094C3D7 /* Scene0_1.cpp in Sources */,
 				04A1942F1BF7329E00CFF47E /* Talking_Rush.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				049B6FCC1CAA6CAA00624B65 /* FightScene0_1.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				049B6FCF1CAAAB0B00624B65 /* SLGCharacter.cpp in Sources */,
 				04A194311BF732A700CFF47E /* Animation_itools.cpp in Sources */,
 				04A194341BF741D900CFF47E /* Loading_Layer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				049B6FC91CAA60CB00624B65 /* SLGMapView.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
