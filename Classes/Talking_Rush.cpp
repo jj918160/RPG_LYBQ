@@ -61,6 +61,8 @@ bool Talking_Rush::init(std::vector<std::string>talk)
             
             over=true;
             _eventDispatcher->removeEventListener(listener);
+            _eventDispatcher->dispatchCustomEvent("talkOver");
+            this->runAction(RemoveSelf::create());
             
             return false;
         }
