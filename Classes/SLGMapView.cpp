@@ -41,7 +41,11 @@ bool SLGMapView::init(const std::string filename){
     _tileMap->setAnchorPoint(ccp(0,0));
     _tileMap->setPosition(0,0);
     this->addChild(_tileMap,0);
-    _tileMap->getLayer("movecost")->setVisible(false);
+    this->_movecost=_tileMap->getLayer("movecost");
+    //this->_TileX=_tileMap->getTileSize().width;
+    //this->_TileY=_tileMap->getTileSize().height;
+    
+    this->_movecost->setVisible(false);
     
     auto BornPoint=_tileMap->getObjectGroups();
     _ememyNum = BornPoint.at(0)->getProperty("enemyNum").asInt();
@@ -68,9 +72,12 @@ bool SLGMapView::init(const std::string filename){
 
 
 Vec2 SLGMapView::tileCoordFromPosition(Vec2 pos){
+    CCLOG("pox:%f,%f",pos.x,pos.y);
     int x=pos.x/_tileMap->getTileSize().width;
-    int y =pos.y/_tileMap->getTileSize().height;
-//    int y=((_tileMap->getMapSize().height*_tileMap->getTileSize().height)-(pos.y+size_height/2))/_tileMap->getTileSize().height;
+    //int y =pos.y/_tileMap->getTileSize().height;
+    
+    int y=((_tileMap->getMapSize().height*_tileMap->getTileSize().height)-pos.y)/_tileMap->getTileSize().height;
+    //CCLOG("x:%d,y:%d",x,y);
 
     return Vec2(x,y);
 }

@@ -11,11 +11,15 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-
+#define PERTILEWIDTH 64
+#define PERTILEHEIGHT 64
 class SLGMapView : public cocos2d::Layer
 {
 public:
     cocos2d::TMXTiledMap* _tileMap;
+    cocos2d::TMXLayer*_movecost;
+    
+    
  
     static SLGMapView* create(const std::string filename);
     virtual bool init(const std::string filename);

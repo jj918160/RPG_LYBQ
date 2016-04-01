@@ -17,6 +17,7 @@
 		04A1942F1BF7329E00CFF47E /* Talking_Rush.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A1942D1BF7329E00CFF47E /* Talking_Rush.cpp */; };
 		04A194311BF732A700CFF47E /* Animation_itools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A194301BF732A700CFF47E /* Animation_itools.cpp */; };
 		04A194341BF741D900CFF47E /* Loading_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A194321BF741D900CFF47E /* Loading_Layer.cpp */; };
+		04E4D72E1CABAB6B00C7E77B /* PathManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -94,6 +95,8 @@
 		04A194301BF732A700CFF47E /* Animation_itools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation_itools.cpp; sourceTree = "<group>"; };
 		04A194321BF741D900CFF47E /* Loading_Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Loading_Layer.cpp; sourceTree = "<group>"; };
 		04A194331BF741D900CFF47E /* Loading_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loading_Layer.h; sourceTree = "<group>"; };
+		04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathManager.cpp; sourceTree = "<group>"; };
+		04E4D72D1CABAB6B00C7E77B /* PathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathManager.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* RPG_LYBQ-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPG_LYBQ-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +208,8 @@
 				049B6FCB1CAA6CAA00624B65 /* FightScene0_1.h */,
 				049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */,
 				049B6FCE1CAAAB0B00624B65 /* SLGCharacter.h */,
+				04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */,
+				04E4D72D1CABAB6B00C7E77B /* PathManager.h */,
 			);
 			name = SGLFight;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				049CBFF71BF811900094C3D7 /* Scene0_1.cpp in Sources */,
 				04A1942F1BF7329E00CFF47E /* Talking_Rush.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				04E4D72E1CABAB6B00C7E77B /* PathManager.cpp in Sources */,
 				049B6FCC1CAA6CAA00624B65 /* FightScene0_1.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				049B6FCF1CAAAB0B00624B65 /* SLGCharacter.cpp in Sources */,
@@ -557,6 +563,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -591,6 +598,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";

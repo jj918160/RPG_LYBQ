@@ -22,6 +22,8 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(FightScene0_1);
+    
+    bool openGo;
 };
 
 #endif /* defined(__RPG_LYBQ__FightScene0_1__) */
