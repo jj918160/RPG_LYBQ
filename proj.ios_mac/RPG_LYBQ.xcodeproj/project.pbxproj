@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0400A4661BF6BD0400741638 /* Begin_Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0400A4641BF6BD0400741638 /* Begin_Scene.cpp */; };
+		0440891C1CAF60C100697635 /* SLGCharacterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */; };
 		049B6FC91CAA60CB00624B65 /* SLGMapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */; };
 		049B6FCC1CAA6CAA00624B65 /* FightScene0_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */; };
 		049B6FCF1CAAAB0B00624B65 /* SLGCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */; };
@@ -77,6 +78,8 @@
 /* Begin PBXFileReference section */
 		0400A4641BF6BD0400741638 /* Begin_Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Begin_Scene.cpp; sourceTree = "<group>"; };
 		0400A4651BF6BD0400741638 /* Begin_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Begin_Scene.h; sourceTree = "<group>"; };
+		0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGCharacterManager.cpp; sourceTree = "<group>"; };
+		0440891B1CAF60C100697635 /* SLGCharacterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGCharacterManager.h; sourceTree = "<group>"; };
 		049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGMapView.cpp; sourceTree = "<group>"; };
 		049B6FC81CAA60CB00624B65 /* SLGMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGMapView.h; sourceTree = "<group>"; };
 		049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FightScene0_1.cpp; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				049B6FCE1CAAAB0B00624B65 /* SLGCharacter.h */,
 				04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */,
 				04E4D72D1CABAB6B00C7E77B /* PathManager.h */,
+				0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */,
+				0440891B1CAF60C100697635 /* SLGCharacterManager.h */,
 			);
 			name = SGLFight;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				0400A4661BF6BD0400741638 /* Begin_Scene.cpp in Sources */,
+				0440891C1CAF60C100697635 /* SLGCharacterManager.cpp in Sources */,
 				049CBFFF1BF824B90094C3D7 /* Player_Base.cpp in Sources */,
 				049CBFFA1BF816910094C3D7 /* UI_Layer.cpp in Sources */,
 				049CBFF71BF811900094C3D7 /* Scene0_1.cpp in Sources */,
