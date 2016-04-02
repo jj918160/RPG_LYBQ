@@ -53,7 +53,6 @@ bool Begin_Scene::init()
     }
 	
     load_animation();
-    //char*msg=loadmsg("headpic/dubai.txt");
     FileUtils::getInstance()->addSearchPath("res/begin");
     title_num=0;
     auto size=Director::getInstance()->getVisibleSize();

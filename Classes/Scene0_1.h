@@ -15,6 +15,15 @@
 USING_NS_CC;
 class Animation_itools;
 
+/*
+ 剧场1: 第一步 行动
+ 第二步:对话      step1;
+ 第三步:任务一 操作wz   step2
+ 第四步:任务二 操作LS   step3
+ 第五步:任务三 操作LS   step4
+ 
+ 
+ */
 class Scene0_1:public Layer
 {
 public:
@@ -24,7 +33,7 @@ public:
     virtual bool init();
     // implement the "static create()" method manually
     CREATE_FUNC(Scene0_1);
-    virtual void update(float dt);
+   // virtual void update(float dt);
     void step_1(float dt);
     void step_2(float dt);
     void step_3(float dt);

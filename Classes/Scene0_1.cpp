@@ -66,7 +66,6 @@ bool Scene0_1::init()
     sp2->walk("weizhenleft_up");
     sp2->runAction(Sequence::create(MoveBy::create(3,Vec2(-350,50)),CallFuncN::create([=](Node*pSender){
         pSender->stopAllActions();
-       
     }),NULL));
     
     auto sp3=Player_Base::create("linxie2.png", "linxie");
@@ -85,13 +84,39 @@ bool Scene0_1::init()
     
     auto ui=UI_Layer::getInstance();
     addChild(ui,2);
-    
-      scheduleOnce(schedule_selector(Scene0_1::step_1), 3.2);
+    scheduleOnce(schedule_selector(Scene0_1::step_1), 3.2);
     
    
-    
-    
-    
+    _eventDispatcher->addCustomEventListener("talkOver",[&](EventCustom*p){
+        if(main_step==0){
+            auto edgaline=Sprite::create();
+            Point points[]={
+                Vec2(566,0),Vec2(820,0),Vec2(960,68),
+                Vec2(960,492),Vec2(900,463),Vec2(598,567),Vec2(536,537),Vec2(350,625),Vec2(237,626),
+                Vec2(0,515),Vec2(0,103),Vec2(114,183),Vec2(566,0)
+            };
+            auto line=PhysicsBody::createEdgeChain(points,13);
+            edgaline->setPhysicsBody(line);
+            auto bg=(Sprite*)this->getChildByTag(9);
+            bg->addChild(edgaline);
+            schedule(schedule_selector(Scene0_1::step_2),1/30,-1,1);
+            main_step=1;
+        
+        
+            auto sp=(Player_Base*)this->getChildByTag(2);
+            UI_Layer::getInstance()->set_control(sp);
+            UI_Layer::getInstance()->set_work("任务:控制卫铮到达指定地点");
+            
+            auto cs=Sprite::create();
+            Animation*animation=AnimationCache::getInstance()->getAnimation("chuansong");
+            Animate*a=Animate::create(animation);
+            cs->runAction(a);
+            cs->setPosition(750,20);
+            this->addChild(cs,2,8);
+        }
+        
+
+    });
     return true;
 }
 bool Scene0_1::touch_oneP(Vec2 pot){
@@ -117,13 +142,13 @@ bool Scene0_1::touch_oneP(Vec2 pot){
     return false;
 
 }
+
+
 void Scene0_1::step_1(float dt){
-        std::vector<std::string> msg;
-        msg=itools->load_mssage("headpic/talk0_1.txt", msg);
-        Talking_Rush*tr=Talking_Rush::create(msg);
-        addChild(tr,1,1);
-       scheduleUpdate();
-    
+    std::vector<std::string> msg;
+    msg=itools->load_mssage("headpic/talk0_1.txt", msg);
+    Talking_Rush*tr=Talking_Rush::create(msg);
+    addChild(tr,1,1);
     
     auto listener=EventListenerTouchOneByOne::create();
     
@@ -139,73 +164,14 @@ void Scene0_1::step_1(float dt){
     Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(listener,-1);
     
 }
-void Scene0_1::update(float dt){
-    Talking_Rush*t=static_cast<Talking_Rush*>(this->getChildByTag(1));
-    
-    if (t) {
-        talk_over=t->over;
-    }
-    
-    if (talk_over) {
-            auto edgaline=Sprite::create();
-            Point points[]={
-                Vec2(566,0),Vec2(820,0),Vec2(960,68),
-                Vec2(960,492),Vec2(900,463),Vec2(598,567),Vec2(536,537),Vec2(350,625),Vec2(237,626),
-                Vec2(0,515),Vec2(0,103),Vec2(114,183),Vec2(566,0)
-        
-            };
-            auto line=PhysicsBody::createEdgeChain(points,13);
-            edgaline->setPhysicsBody(line);
-            auto bg=(Sprite*)this->getChildByTag(9);
-            bg->addChild(edgaline);
-
-        unscheduleUpdate();
-        schedule(schedule_selector(Scene0_1::step_2),1/30,-1,1);
-        t->runAction(RemoveSelf::create());
-        main_step=1;
-       
-    }
-    if (main_step==1) {
-        
-         auto sp=(Player_Base*)this->getChildByTag(2);
-        UI_Layer::getInstance()->set_control(sp);
-        UI_Layer::getInstance()->set_work("任务:控制卫铮到达指定地点");
-        
-        auto cs=Sprite::create();
-        Animation*animation=AnimationCache::getInstance()->getAnimation("chuansong");
-        Animate*a=Animate::create(animation);
-        cs->runAction(a);
-        cs->setPosition(750,20);
-        this->addChild(cs,2,8);
-        
-       
-    }
-}
-void Scene0_1::loadAnimation(){
-    AnimationCache* ac=AnimationCache::getInstance();
-    Animation*talk=itools->makeAnimationfrommixpicture("CG-1165.png",4,1,1,1,4,1,0.2f,false,-1);
-    ac->addAnimation(talk,"talk");
-    
-    Animation*chuansong=itools->makeAnimationfrommixpicture("CG-1648.png",3,1,1,1,3,1,0.5f,false,-1);
-    ac->addAnimation(chuansong,"chuansong");
-    
-    Animation*des1=itools->makeAnimationfrommixpicture("CG-1175.png",3,3,1,1,3,3,0.2f,false,-1);
-    ac->addAnimation(des1,"des1");
-
-    Animation*des2=itools->makeAnimationfrommixpicture("CG-1178.png",3,3,1,1,3,3,0.2f,false,-1);
-    ac->addAnimation(des2,"des2");
-    
-}
 
 void Scene0_1::step_2(float dt){
-    
     auto sp2=(Player_Base*)this->getChildByTag(22);
     if (main_step==1&&sp2->getBoundingBox().containsPoint(this->getChildByTag(8)->getPosition())) {
          main_step=2;
         vec.eraseObject(sp2);
         UI_Layer::getInstance()->set_control(nullptr);
         sp2->runAction(Sequence::create(RemoveSelf::create(), CallFunc::create([&](){
-            CCLOG("over");
             UI_Layer::getInstance()->set_work("任务:控制林殊到达指定地点");
             this->getChildByTag(8)->setPosition(10,200);
              unschedule(schedule_selector(Scene0_1::step_2));
@@ -242,4 +208,20 @@ void Scene0_1::step_4(float dt){
         UI_Layer::getInstance()->setVisible(false);
     }
 
+}
+
+void Scene0_1::loadAnimation(){
+    AnimationCache* ac=AnimationCache::getInstance();
+    Animation*talk=itools->makeAnimationfrommixpicture("CG-1165.png",4,1,1,1,4,1,0.2f,false,-1);
+    ac->addAnimation(talk,"talk");
+    
+    Animation*chuansong=itools->makeAnimationfrommixpicture("CG-1648.png",3,1,1,1,3,1,0.5f,false,-1);
+    ac->addAnimation(chuansong,"chuansong");
+    
+    Animation*des1=itools->makeAnimationfrommixpicture("CG-1175.png",3,3,1,1,3,3,0.2f,false,-1);
+    ac->addAnimation(des1,"des1");
+    
+    Animation*des2=itools->makeAnimationfrommixpicture("CG-1178.png",3,3,1,1,3,3,0.2f,false,-1);
+    ac->addAnimation(des2,"des2");
+    
 }

@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "Begin_Scene.h"
-#include "Scene0_1.h"
+//#include "Scene0_1.h"
+#include "FightScene0_1.h"
 
 USING_NS_CC;
 
@@ -43,8 +44,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("res");
 
     // create a scene. it's an autorelease object
-    auto scene = Begin_Scene::createScene();//
-    //auto scene = Scene0_1::createScene();
+    //auto scene = Begin_Scene::createScene();//
+    auto scene = FightScene0_1::createScene();
     // run
     director->runWithScene(scene);
 
