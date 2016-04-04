@@ -7,6 +7,7 @@
 //
 
 #include "SLGMapView.h"
+#include "SLGCharacterManager.h"
 USING_NS_CC;
 
 SLGMapView*SLGMapView::create(const std::string filename)
@@ -57,19 +58,23 @@ bool SLGMapView::init(const std::string filename){
      if(name>0&&name<100)
      {
          auto x = it->asValueMap().at("x").asFloat();
-         auto y = size_height-it->asValueMap().at("y").asFloat();
+         auto y = it->asValueMap().at("y").asFloat();
 
          pointOfmy.push_back(this->tileCoordFromPosition(Vec2(x,y)));
      }
      else if(name>100){
          auto x = it->asValueMap().at("x").asFloat();
-         auto y = size_height-it->asValueMap().at("y").asFloat();
+         auto y =it->asValueMap().at("y").asFloat();
          pointOfenemy.push_back(this->tileCoordFromPosition(Vec2(x,y)));
      }
     }
     return true;
 }
-
+void SLGMapView::removeSwitch(){
+    auto p = _tileMap->getChildByName("attackBox");
+    if(p)
+    p->removeFromParent();
+}
 
 Vec2 SLGMapView::tileCoordFromPosition(Vec2 pos){
     CCLOG("pox:%f,%f",pos.x,pos.y);

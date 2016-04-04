@@ -18,14 +18,15 @@ class SLGMapView : public cocos2d::Layer
 public:
     cocos2d::TMXTiledMap* _tileMap;
     cocos2d::TMXLayer*_movecost;
+    void removeSwitch();
     
     
  
     static SLGMapView* create(const std::string filename);
     virtual bool init(const std::string filename);
     
-    float size_width;
-    float size_height;
+    float size_width; //地图的宽高
+    float size_height; //地图的宽高
     cocos2d::Size winsize;
     cocos2d::Vec2 tileCoordFromPosition(cocos2d::Vec2 pos);
     

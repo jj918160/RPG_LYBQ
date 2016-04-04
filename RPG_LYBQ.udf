@@ -2,8 +2,8 @@
   <Properties>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="VS" />
-        <IsLastPublish Value="False" />
+        <LastPublishType Value="Resource" />
+        <IsLastPublish Value="True" />
         <LastRunType Value="Android" />
       </Value>
     </Item>
@@ -33,8 +33,9 @@
         <OpenedDocuments>
           <FilePathData Path="MainScene.csd" />
           <FilePathData Path="Layer.csd" />
+          <FilePathData Path="SLGComondNode.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="MainScene.csd" />
+        <ActiveDocument Path="SLGComondNode.csd" />
       </Value>
     </Item>
   </Properties>

@@ -47,7 +47,7 @@ public:
     Gird*parent;
 };
 
-class PathManager:public cocos2d::Ref{
+class PathManager:public cocos2d::Node{
 public:
     static PathManager*create(SLGMapView*map);
     virtual bool init(SLGMapView*map);

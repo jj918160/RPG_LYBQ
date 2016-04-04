@@ -3,6 +3,10 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Image Name="19-1.png" />
+        <Image Name="19-2.png" />
+        <Image Name="19-3.png" />
+        <Image Name="19-4.png" />
         <Image Name="button_atk.png" />
         <Image Name="button_atk2.png" />
         <Image Name="CG-1086.png" />
@@ -14,6 +18,7 @@
         <Image Name="HelloWorld.png" />
         <Project Name="Layer.csd" Type="Layer" />
         <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="SLGComondNode.csd" Type="Node" />
         <Image Name="sneakyJoytick.png" />
         <Image Name="sneakyJoytickBG.png" />
         <Image Name="zhangjiekuang.png" />

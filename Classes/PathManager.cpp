@@ -26,7 +26,11 @@ PathManager*PathManager::create(SLGMapView*map)
     }
 }
 
-bool PathManager::init(SLGMapView*map){   
+bool PathManager::init(SLGMapView*map){
+    if(!Node::init())
+    {
+        return false;
+    }
     this->map=map;
     Vec2 tilesize = map->_movecost->getLayerSize();
     this->intSize=tilesize;
@@ -128,12 +132,12 @@ void PathManager::checkFour(Gird*p,int costeLess){
     p->setValue(costeLess);
     p->setPass(true);
     quene.pushBack(p);
-    int x = p->getX();
-    int y = p->getY();
+ //   int x = p->getX();
+  //  int y = p->getY();
     while (quene.size()>0) {
         auto obj = quene.front();
-        x=obj->getX();
-        y=obj->getY();
+       int x=obj->getX();
+       int y=obj->getY();
         costeLess=obj->getValue();
         if(x>0&&costeLess>=this->vecOfmoveCost[y].at(x-1)&&!this->canMove[y].at(x-1)->getPass())
         {
@@ -181,7 +185,7 @@ void PathManager::show(){
     }
 }
 void PathManager::removeAllRange(){
-    //CCLOG("Gsize:%zd",GirdSprites.size());
+    CCLOG("Gsize:%zd",GirdSprites.size());
     if(GirdSprites.empty())
         return;
     for (auto temp : GirdSprites){

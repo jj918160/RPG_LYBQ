@@ -10,7 +10,9 @@
 #define __RPG_LYBQ__FightScene0_1__
 
 #include "cocos2d.h"
-
+class SLGCharacterManager;
+class SLGMapView;
+class PathManager;
 class FightScene0_1 : public cocos2d::Layer
 {
 public:
@@ -22,8 +24,11 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(FightScene0_1);
+    SLGMapView*map;
+    PathManager*pmg;
     
-    bool openGo;
+    void createPlayerCr(const char*filename,cocos2d::Vec2 point,SLGCharacterManager*sm);
+    
 };
 
 #endif /* defined(__RPG_LYBQ__FightScene0_1__) */

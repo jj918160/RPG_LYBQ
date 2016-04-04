@@ -18,6 +18,7 @@
 		04A1942F1BF7329E00CFF47E /* Talking_Rush.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A1942D1BF7329E00CFF47E /* Talking_Rush.cpp */; };
 		04A194311BF732A700CFF47E /* Animation_itools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A194301BF732A700CFF47E /* Animation_itools.cpp */; };
 		04A194341BF741D900CFF47E /* Loading_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A194321BF741D900CFF47E /* Loading_Layer.cpp */; };
+		04AE9AB11CB115A8004D7729 /* SLGCharacterPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04AE9AAF1CB115A8004D7729 /* SLGCharacterPlayer.cpp */; };
 		04E4D72E1CABAB6B00C7E77B /* PathManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -98,6 +99,8 @@
 		04A194301BF732A700CFF47E /* Animation_itools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation_itools.cpp; sourceTree = "<group>"; };
 		04A194321BF741D900CFF47E /* Loading_Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Loading_Layer.cpp; sourceTree = "<group>"; };
 		04A194331BF741D900CFF47E /* Loading_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loading_Layer.h; sourceTree = "<group>"; };
+		04AE9AAF1CB115A8004D7729 /* SLGCharacterPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGCharacterPlayer.cpp; sourceTree = "<group>"; };
+		04AE9AB01CB115A8004D7729 /* SLGCharacterPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGCharacterPlayer.h; sourceTree = "<group>"; };
 		04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathManager.cpp; sourceTree = "<group>"; };
 		04E4D72D1CABAB6B00C7E77B /* PathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathManager.h; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -207,12 +210,14 @@
 			children = (
 				049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */,
 				049B6FC81CAA60CB00624B65 /* SLGMapView.h */,
+				04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */,
+				04E4D72D1CABAB6B00C7E77B /* PathManager.h */,
 				049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */,
 				049B6FCB1CAA6CAA00624B65 /* FightScene0_1.h */,
 				049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */,
 				049B6FCE1CAAAB0B00624B65 /* SLGCharacter.h */,
-				04E4D72C1CABAB6B00C7E77B /* PathManager.cpp */,
-				04E4D72D1CABAB6B00C7E77B /* PathManager.h */,
+				04AE9AAF1CB115A8004D7729 /* SLGCharacterPlayer.cpp */,
+				04AE9AB01CB115A8004D7729 /* SLGCharacterPlayer.h */,
 				0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */,
 				0440891B1CAF60C100697635 /* SLGCharacterManager.h */,
 			);
@@ -508,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				04AE9AB11CB115A8004D7729 /* SLGCharacterPlayer.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				0400A4661BF6BD0400741638 /* Begin_Scene.cpp in Sources */,
 				0440891C1CAF60C100697635 /* SLGCharacterManager.cpp in Sources */,
