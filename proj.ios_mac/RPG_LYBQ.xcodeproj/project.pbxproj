@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0400A4661BF6BD0400741638 /* Begin_Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0400A4641BF6BD0400741638 /* Begin_Scene.cpp */; };
 		0440891C1CAF60C100697635 /* SLGCharacterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */; };
+		044089261CAF637200697635 /* SLGSoiderAI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 044089241CAF637200697635 /* SLGSoiderAI.cpp */; };
 		049B6FC91CAA60CB00624B65 /* SLGMapView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */; };
 		049B6FCC1CAA6CAA00624B65 /* FightScene0_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */; };
 		049B6FCF1CAAAB0B00624B65 /* SLGCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 049B6FCD1CAAAB0B00624B65 /* SLGCharacter.cpp */; };
@@ -80,6 +81,8 @@
 		0400A4651BF6BD0400741638 /* Begin_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Begin_Scene.h; sourceTree = "<group>"; };
 		0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGCharacterManager.cpp; sourceTree = "<group>"; };
 		0440891B1CAF60C100697635 /* SLGCharacterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGCharacterManager.h; sourceTree = "<group>"; };
+		044089241CAF637200697635 /* SLGSoiderAI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGSoiderAI.cpp; sourceTree = "<group>"; };
+		044089251CAF637200697635 /* SLGSoiderAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGSoiderAI.h; sourceTree = "<group>"; };
 		049B6FC71CAA60CB00624B65 /* SLGMapView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLGMapView.cpp; sourceTree = "<group>"; };
 		049B6FC81CAA60CB00624B65 /* SLGMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGMapView.h; sourceTree = "<group>"; };
 		049B6FCA1CAA6CAA00624B65 /* FightScene0_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FightScene0_1.cpp; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				04E4D72D1CABAB6B00C7E77B /* PathManager.h */,
 				0440891A1CAF60C100697635 /* SLGCharacterManager.cpp */,
 				0440891B1CAF60C100697635 /* SLGCharacterManager.h */,
+				044089241CAF637200697635 /* SLGSoiderAI.cpp */,
+				044089251CAF637200697635 /* SLGSoiderAI.h */,
 			);
 			name = SGLFight;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				049B6FCF1CAAAB0B00624B65 /* SLGCharacter.cpp in Sources */,
 				04A194311BF732A700CFF47E /* Animation_itools.cpp in Sources */,
+				044089261CAF637200697635 /* SLGSoiderAI.cpp in Sources */,
 				04A194341BF741D900CFF47E /* Loading_Layer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				049B6FC91CAA60CB00624B65 /* SLGMapView.cpp in Sources */,
